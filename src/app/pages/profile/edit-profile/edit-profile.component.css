@@ -1,0 +1,31 @@
+.detail__modal {
+    z-index: 10;
+    margin: auto;
+    width: 861px;
+    background: white;
+    height: 429px;
+    position: absolute;
+    top: 14vh;
+    left: 15rem;
+    border-radius: 22px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+}
+
+.close__item {
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}

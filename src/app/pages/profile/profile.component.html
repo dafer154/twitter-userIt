@@ -1,0 +1,49 @@
+<div class="profile__container">
+    <div class="profile">
+        <div class="profile__header">
+
+            <div class="profile__image">
+                <img src={{avatarLink}} class="style__image" alt="image">
+            </div>
+            <div class="profile__edit">
+                <button mat-button color="primary" (click)="editProfile()">Edit profile</button>
+            </div>
+        </div>
+        <div class="profile__info">
+            <strong>Ana M. Zuluaga</strong>
+            <strong>@ana154</strong>
+            <div class="profile__location">
+                <span>
+                    <i class='bx bx-current-location'></i>Cali
+                </span>
+                <span>
+                    <i class='bx bx-link' ></i> anazuluaga.com
+                </span>
+                <span>
+                    <i class='bx bx-calendar' ></i> Born 15 May 1998
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile__tweets">
+
+        <div class="profile__post" *ngFor="let post of posts">
+            <div class="post__header">
+                <div class="post__img">
+                    <img src={{post.image}} class="image__tweet" />
+                </div>
+                <div class="post__tweet">
+                    <p class="tweet__text">
+                        {{post.tweet}}
+                    </p>
+                </div>
+            </div>
+            <div class="post__footer">
+                <i class='bx bx-heart'></i>
+                <div><span>{{post.likes}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-edit-profile *ngIf="showEditProfile" [idUser]="idUser" (close)="closeModal($event)"></app-edit-profile>
